@@ -71,6 +71,15 @@ namespace pong.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream background_sound {
+            get {
+                return ResourceManager.GetStream("background_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap ball_blue {
@@ -127,6 +136,15 @@ namespace pong.Properties {
             get {
                 object obj = ResourceManager.GetObject("exit_normal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream hhhhhhhhhhhhhhhh {
+            get {
+                return ResourceManager.GetStream("hhhhhhhhhhhhhhhh", resourceCulture);
             }
         }
         

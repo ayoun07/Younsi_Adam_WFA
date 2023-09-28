@@ -31,6 +31,7 @@ namespace pong
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -45,7 +46,7 @@ namespace pong
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 20;
+            this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox2
@@ -74,7 +75,7 @@ namespace pong
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::pong.Properties.Resources.ball_blue1;
-            this.pictureBox1.Location = new System.Drawing.Point(474, 226);
+            this.pictureBox1.Location = new System.Drawing.Point(370, 272);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,7 +90,7 @@ namespace pong
             this.playerscore.ForeColor = System.Drawing.Color.Maroon;
             this.playerscore.Location = new System.Drawing.Point(179, 22);
             this.playerscore.Name = "playerscore";
-            this.playerscore.Size = new System.Drawing.Size(33, 40);
+            this.playerscore.Size = new System.Drawing.Size(32, 40);
             this.playerscore.TabIndex = 3;
             this.playerscore.Text = "0";
             // 
@@ -101,7 +102,7 @@ namespace pong
             this.cpuscore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cpuscore.Location = new System.Drawing.Point(615, 22);
             this.cpuscore.Name = "cpuscore";
-            this.cpuscore.Size = new System.Drawing.Size(33, 40);
+            this.cpuscore.Size = new System.Drawing.Size(32, 40);
             this.cpuscore.TabIndex = 4;
             this.cpuscore.Text = "0";
             // 
@@ -120,11 +121,11 @@ namespace pong
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
