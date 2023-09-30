@@ -32,11 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.button4 = new System.Windows.Forms.Button();
             this.btn_sound = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.btn_sound)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,15 +70,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "sound on/off";
             // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(132, 164);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 56);
-            this.trackBar1.TabIndex = 7;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.InfoText;
@@ -95,12 +86,21 @@
             // btn_sound
             // 
             this.btn_sound.Image = global::pong.Properties.Resources.sound_on;
-            this.btn_sound.Location = new System.Drawing.Point(157, 240);
+            this.btn_sound.Location = new System.Drawing.Point(160, 240);
             this.btn_sound.Name = "btn_sound";
             this.btn_sound.Size = new System.Drawing.Size(50, 50);
             this.btn_sound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btn_sound.TabIndex = 8;
             this.btn_sound.TabStop = false;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(114, 162);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(144, 56);
+            this.trackBar1.TabIndex = 10;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // Form5
             // 
@@ -108,9 +108,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(382, 403);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btn_sound);
-            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -118,8 +118,8 @@
             this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form5";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_sound)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,8 +130,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.PictureBox btn_sound;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }

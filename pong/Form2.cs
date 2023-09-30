@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,13 +19,22 @@ namespace pong
         // Déclaration de variables
         
         public Boolean choixun;
+        // Déclaration de variables pour controler la musique du fond en utilisant la classe System.media.soundplayer
+        public static WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
 
-        
+
+
         public Form2()
         {
             InitializeComponent();
-           
+            // Instance de la classe 
+            wplayer.URL = (@"C:\Users\user\Source\Repos\ayoun07\pong\pong\Resources\hhhhhhhhhhhhhhhh.wav");
+            wplayer.controls.play();
+            // Cacher le axWindowsplayer1 une fois la fenetre ouverte 
+            axWindowsMediaPlayer1.Hide();
         }
+
+        
 
 
 
@@ -42,11 +52,6 @@ namespace pong
             fenetre.ShowDialog();
         }
 
-        private void button1_MouseHover(object sender, EventArgs e)
-        {
-            System.Media.SoundPlayer sound = new System.Media.SoundPlayer(@"C:\Users\user\Source\Repos\ayoun07\pong\pong\Resources\background sound.wav");
-            sound.Play();
-        }
 
             private void button2_Click(object sender, EventArgs e)
         {
@@ -65,6 +70,7 @@ namespace pong
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //Ouvrir La fenetre pour gerer la musique 
             Form5 fenetre = new Form5();
             fenetre.ShowDialog();
         }

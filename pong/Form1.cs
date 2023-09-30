@@ -42,7 +42,7 @@ namespace pong
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // Crée de nouvelles coordonées aléatoire^pour la balle 
+            // Crée de nouvelles coordonées aléatoire pour la balle 
             Random newballspot = new Random();
             int newspot = newballspot.Next(10 , this.ClientSize.Height - 10);
 
@@ -119,13 +119,13 @@ namespace pong
             pictureBox1.Location = new Point(x + sensX, y + sensY);
             
             // Au bout de 10 points le jeu s'arrete en désignant un gagnant
-            if (scoreplayer >=3)
+            if (scoreplayer >= 10)
             {
                 joueur1Gagne = true;
                 timer1.Stop();
                 Refresh();
             }
-            if (scorecpu >= 3)
+            if (scorecpu >= 10)
             {
                 joueur2Gagne = true;
                 timer1.Stop();

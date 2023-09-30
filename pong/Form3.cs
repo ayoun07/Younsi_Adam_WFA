@@ -23,6 +23,8 @@ namespace pong
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // La musique s'arrete une fois le jeu lançer
+            Form2.wplayer.controls.stop();
             // Si le joueur a choisi de jouer seul il ouvre la fenetre ou l'ordinateur joue contre lui
             if (Choix == true)
             {
@@ -39,7 +41,8 @@ namespace pong
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            // La musique s'arrete une fois le jeu lançer
+            Form2.wplayer.controls.stop();
             if (Choix == true)
             {
                 Form4 ff = new Form4();
@@ -63,6 +66,7 @@ namespace pong
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Form2.wplayer.controls.stop();
             // Boutton difficile
             if (Choix==true)
             {
@@ -84,11 +88,13 @@ namespace pong
 
         private void button5_Click(object sender, EventArgs e)
         {
+            // Le joueur quitte le jeu
             Application.Exit();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            // Le joueur reviens en arriere
             Close();
         }
 

@@ -26,14 +26,17 @@ namespace pong
         int xcentre;
         int ycentre;
 
+        // Méthode pour modifier les coordonées au meme temp la vitesse de la balle
         public void setsensX(int sensX) { this.sensX = sensX; }
         public void setsensY(int sensY) { this.sensY = sensY; }
 
+        // Méthode pour modifier la vitesse de la raquette 
         public void setdirectionpalette(int directionpalette) {  this.directionpalette = directionpalette; }
 
         public Form4()
         {
             InitializeComponent();
+            // Initialisation des coordonnées de l'écran 
             xcentre = this.ClientSize.Width / 2;
             ycentre = this.ClientSize.Height / 2;
         }
@@ -48,6 +51,8 @@ namespace pong
             int x = pictureBox1.Location.X;
             int y = pictureBox1.Location.Y;
             pictureBox4.Top += directionpalette;
+
+            // Si les bord de la raquette de haut et de bas touche les éxtrémités de l'écran elle change de direction 
             if (pictureBox4.Top<0 || pictureBox4.Top > 400)
             {
                 directionpalette = -directionpalette; 
@@ -89,6 +94,8 @@ namespace pong
                 sensY = -sensY;
 
             }
+
+            // Quand la balle touche la raquette 
             if (pictureBox1.Bounds.IntersectsWith(pictureBox2.Bounds))
             {
                 sensX = -sensX;
@@ -175,4 +182,5 @@ namespace pong
         }
     }
     }
+// Presque les memes commentaires que ceux de la Forme1 j'ai mis des commentaires ou ça change un peu 
 

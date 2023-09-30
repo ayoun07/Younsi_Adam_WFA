@@ -8,40 +8,39 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
-using NAudio.Wave;
+
 
 namespace pong
 {
     public partial class Form5 : Form
     {
-        private WaveOutEvent outputDevice = new WaveOutEvent();
-        private AudioFileReader audioFile;
+        
 
 
         public Form5()
         {
             InitializeComponent();
-            audioFile = new AudioFileReader("C:\\Users\\user\\Source\\Repos\\ayoun07\\pong\\pong\\Resources\\hhhhhhhhhhhhhhhh.wav");
 
-            // Associez l'AudioFileReader à l'outputDevice
-            outputDevice.Init(audioFile);
-
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Pour revenir en arriere
+            Close();
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            int volumeValue = trackBar1.Value;
+            // Pour gérer et controler le son quand on scroll la barre 
+            Form2.wplayer.controls.play();
+            btn_sound.Image = Properties.Resources.sound_on;
+            Form2.wplayer.settings.volume = trackBar1.Value;
 
-            // Calculez le volume en pourcentage (de 0 à 1) en fonction de la valeur du TrackBar
-            float volume = (float)volumeValue / 100f;
 
-            // Ajustez le volume audio
-            outputDevice.Volume = volume;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Close();
+            //Une fois on scroll jusqu'à 0 la picturebox affiche une image de sound off 
+            if (trackBar1.Value == 0)
+            {
+                btn_sound.Image = Properties.Resources.sound_off;
+            }
         }
     }
 }
